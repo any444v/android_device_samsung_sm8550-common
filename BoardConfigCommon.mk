@@ -59,8 +59,10 @@ TARGET_NEEDS_DTBOIMAGE := true
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
 
-# HWUI
+# HWUI - Enable Skia Vulkan
 USE_OPENGL_RENDERER := true
+TARGET_USES_VULKAN := true
+BOARD_USES_SKIAVK := true
 
 # Init Boot
 BOARD_INIT_BOOT_HEADER_VERSION := 4
@@ -94,7 +96,7 @@ TARGET_KERNEL_EXT_MODULE_ROOT := kernel/samsung/sm8550-modules
 BOARD_USES_METADATA_PARTITION := true
 
 # Partitions
--include vendor/aosp/config/BoardConfigReservedSize.mk
+-include vendor/lineage/config/BoardConfigReservedSize.mk
 BOARD_PRODUCTIMAGE_MINIMAL_PARTITION_RESERVED_SIZE := false
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
