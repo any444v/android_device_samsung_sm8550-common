@@ -37,7 +37,7 @@ vendor.audio.feature.usb_offload.enable=true
 vendor.audio.flac.sw.decoder.24bit=true
 vendor.audio.hal.boot.timeout.ms=20000
 vendor.audio.hal.output.suspend.supported=true
-vendor.audio.offload.buffer.size.kb=32
+vendor.audio.offload.buffer.size.kb=256
 vendor.audio.offload.gapless.enabled=true
 vendor.audio.offload.multiaac.enable=true
 vendor.audio.offload.track.enable=true
@@ -114,7 +114,7 @@ ro.hardware.gatekeeper=mdfpp
 
 # Graphics
 debug.sf.auto_latch_unsignaled=0
-debug.sf.disable_client_composition_cache=1
+debug.sf.disable_client_composition_cache=0
 debug.sf.early.app.duration=16600000
 debug.sf.early.sf.duration=16600000
 debug.sf.earlyGl.app.duration=16600000
@@ -219,6 +219,8 @@ vendor.dynamic_sensor.setup.timeout.ms=2000
 ro.soc.manufacturer=QTI
 
 # USB
+ro.usb.uvc.disable_video_encode_flag=true
+ro.usb.uvc.enabled=true
 sys.usb.mtp.batchcancel=1
 vendor.usb.controller=a600000.dwc3
 vendor.usb.diag.func.name=ffs

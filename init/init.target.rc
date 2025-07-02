@@ -89,9 +89,6 @@ on fs
     mkdir /mnt/vendor/persist/secnvm 0770 system system
     mkdir /mnt/vendor/persist/data 0700 system system
 
-on property:ro.boot.product.vendor.sku=kalama
-    setprop ro.soc.model kalama
-
 on post-fs
     #Execute virtualization manager
     enable vendor.qvirtmgr
@@ -111,7 +108,7 @@ on property:vendor.post_boot.parsed=1
     write /proc/sys/walt/input_boost/input_boost_ms 0
 
 on early-boot
-    start vendor.sensors
+    verity_update_state
 
 on boot
     write /dev/cpuset/audio-app/cpus 1-2
