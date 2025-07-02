@@ -58,10 +58,9 @@ TARGET_NEEDS_DTBOIMAGE := true
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
 
-# HWUI - Enable Skia Vulkan
+# HWUI
 USE_OPENGL_RENDERER := true
 TARGET_USES_VULKAN := true
-BOARD_USES_SKIAVK := true
 
 # Init Boot
 BOARD_INIT_BOOT_HEADER_VERSION := 4
