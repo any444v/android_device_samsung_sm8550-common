@@ -66,6 +66,9 @@ TARGET_USES_VULKAN := true
 BOARD_INIT_BOOT_HEADER_VERSION := 4
 BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 
+# HWUI
+HWUI_COMPILE_FOR_PERF := true
+
 # Kernel
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
